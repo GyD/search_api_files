@@ -1,0 +1,8 @@
+name = Search API - Files attachments
+description = "Provides a generic API for modules offering search capabilites."
+dependencies[] = search_api
+core = 7.x
+package = Search
+
+
+files[] = includes/SearchApiFilesAlterSettings.inc

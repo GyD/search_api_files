@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_search_api_alter_callback_info().
+ */
+function search_api_files_search_api_alter_callback_info() {
+  $callbacks['search_api_files_alter_settings'] = array(
+    'name' => t('File attachments'),
+    'description' => t('Search API attachments settings.'),
+    'class' => 'SearchApiFilesAlterSettings',
+  );
+  return $callbacks;
+}
+
+
+/**
+ * default include file extensions
+ */
+function search_api_files_default_files_ext() {
+  $ext = array(
+    'pdf',
+  );
+  return array_combine($ext, $ext);
+}
